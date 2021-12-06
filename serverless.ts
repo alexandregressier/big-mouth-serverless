@@ -1,5 +1,6 @@
 import type { AWS } from "@serverless/typescript"
 
+import home from "@functions/home"
 import hello from "@functions/hello"
 
 const serverlessConfiguration: AWS = {
@@ -20,11 +21,14 @@ const serverlessConfiguration: AWS = {
         lambdaHashingVersion: "20201221",
         region: "eu-west-3",
     },
-    // import the function via paths
+    package: {
+        individually: true,
+        patterns: ["static"],
+    },
     functions: {
+        home,
         hello,
     },
-    package: { individually: true },
     custom: {
         esbuild: {
             bundle: true,
