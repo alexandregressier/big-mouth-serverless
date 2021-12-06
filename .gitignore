@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# IntelliJ IDEA
+.idea/*
+!.idea/dictionaries/
+!.idea/scopes/
+!.idea/fileColors.xml
+
+# npm
+node_modules/
+
+# esbuild
+.esbuild
+
+# Serverless
+.serverless/
